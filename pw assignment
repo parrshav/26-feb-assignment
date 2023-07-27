@@ -1,0 +1,55 @@
+Numpy BasicAssignment Questions 
+Assignment 
+Consider the below code to answer further questions: 
+import numpy as np 
+list_ = [ ‘1’ , ’2’ , ‘3’ , ‘4’ , ‘5’ ] 
+array_list = np.array(object = list_) 
+Q1. Is there any difference in the data type of variables list_ and array_list? If there is then write a code  to print the data types of both the variables
+The list_ variable is a regular Python list, and its elements are of type str (strings) because the elements are specified as strings in the list declaration:
+NumPy automatically infers the data type of the elements based on the data in the original list. In this case, the elements are strings in the original list, but they can be converted to integers without any loss of information. 
+type(list_)
+type(array_list)
+Q2. Write a code to print the data type of each and every element of both the variables list_ and  arra_list. 
+for i in list_:
+    data_type=type(i)
+    print(data_type)
+
+for j in array_list:
+    data_type=type(j)
+    print(data_type)
+
+Q3. Considering the following changes in the variable, array_list: 
+array_list = np.array(object = list_, dtype = int) 
+Will there be any difference in the data type of the elements present in both the variables, list_ and  arra_list? If so then print the data types of each and every element present in both the variables, list_  and arra_list. 
+import numpy as np 
+list_ = ['1','2','3','4','5'] 
+array_list = np.array(object = list_, dtype = int) 
+for i in list_:
+    data_type=type(i)
+    print(data_type)
+for j in array_list:
+    data_type=type(j)
+    print(data_type)
+
+Consider the below code to answer further questions: 
+import numpy as np 
+num_list = [ [ 1 , 2 , 3 ] , [ 4 , 5 , 6 ] ] 
+num_array = np.array(object = num_list) 
+Q4. Write a code to find the following characteristics of variable, num_array: 
+(i)  shape 
+(ii) size 
+print('size of num_array',num_array.size)
+print('shape of num_array',num_array.shape)
+print('max of num_array',np.max(num_list))
+print('min of num_array',np.min(num_list))
+
+Q5. Write a code to create numpy array of 3*3 matrix containing zeros only, using a numpy array  creation function. 
+[Hint: The size of the array will be 9 and the shape will be (3,3).] 
+import numpy as np
+np.zeros((3,3))
+
+Q6. Create an identity matrix of shape (5,5) using numpy functions? 
+[Hint: An identity matrix is a matrix containing 1 diagonally and other elements will be 0.] 
+np.matrix('0 2 3 4 5;6 0 8 9 10;11 12 0 14 15 ;16 17 18 0 20;21 22 23 24 0')
+Note:  Create your assignment in Jupyter notebook and upload it in GitHub & share that github   repository link through your dashboard. Make sure the repository is public.
+Data Science Masters 
